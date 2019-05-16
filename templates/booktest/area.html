@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>当前城市：</h1>
+{{ area.area_name }}
+<h1>上级城市：</h1>
+{{ area.area_parent.area_name }}
+<h1>下级城市：</h1>
+<ul>
+    {% for area_son in area_sons %}
+        <li>{{ area_son.area_name }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
